@@ -1,3 +1,0 @@
-﻿  main.cpp
-D:\Учеба\плюсы\lab_tree\lab_tree\tree.h(320): warning C4715: Tree<int>::isIdenticalKey: значение возвращается не при всех путях выполнения
-  lab_tree.vcxproj -> D:\Учеба\плюсы\lab_tree\x64\Debug\lab_tree.exe
