@@ -38,13 +38,16 @@ int main() {
 	cout << "isIdenticalKey in tree3: " << tree1.isIdenticalKey(tree3) << endl;
 
 	cout <<endl<< "tree1 node count: " << tree1.getCount() << endl;
+	cout << endl << "tree1 height: " << tree1.getHeight() << endl;
 
 	cout << endl << "tree1 iterative walk: " << endl;
 	tree1.iterativeWalk();
 
 	cout<<"tree1 and tree2 similar?: "<<tree1.isSimilar(tree2)<<endl;
-	cout << tree2.getHeight() << " " << tree3.getHeight() << " " << tree2.getCount() << " " << tree3.getCount() << endl;
 	cout << "tree3 and tree2 similar?: " << tree3.isSimilar(tree2) << endl;
+
+	cout <<endl<< "tree1 widthWalk:" << endl;
+	tree1.widthWalk();
 
 	system("pause");
 	return 0;

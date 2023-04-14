@@ -25,6 +25,8 @@ public:
     int getHeight();
     void inOrderWalk();
     void iterativeWalk() const;
+    void print_level(TreeNode<T>* node, int level);
+    void widthWalk();
     bool isSimilar(const Tree<T>& other) const;
     Tree <T>& operator= (const Tree <T>&& src) = delete;
     Tree(const Tree<T>& scr) = delete;
@@ -373,7 +375,41 @@ bool Tree<T>::isSimilar(const Tree<T>& other) const {
     return (getCount(other.root) == getCount(this->root) && getHeight(other.root) == getHeight(this->root));
 
 }
+template <class T>
+void Tree<T>::print_level(TreeNode<T>* node, int level) {
 
+    if (node == nullptr) {
+
+        return;
+
+    }
+    if (level == 0) {
+
+        cout << node->get_data() << " ";
+
+    }
+    else if (level>0){
+
+        
+        print_level(node->left, level - 1);
+        print_level(node->right, level - 1);
+
+    }
+
+}
+template <class T>
+void Tree<T>:: widthWalk() {
+
+    int h = this->getHeight();
+    for (int i = 0; i < h; i++) {
+
+        print_level(this->root, i);
+        cout << endl;
+
+    }
+
+
+}
 
 
 #endif _BINARY_SEARCH_TREE_H
